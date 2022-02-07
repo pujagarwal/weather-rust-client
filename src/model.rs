@@ -4,7 +4,8 @@
 //   In action: https://app.quicktype.io
 //
 
-use serde::{Serialize, Deserialize};
+//use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Weather {
@@ -14,4 +15,21 @@ pub struct Weather {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Main {
     temp: f64,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct User {
+    pub username: String,
+    pub password: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct UserResponse {
+    pub access_token: String,
+    pub expires: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct GreetingResponse {
+    pub greeting: String,
 }
